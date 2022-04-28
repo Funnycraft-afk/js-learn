@@ -10,9 +10,16 @@ const personalMovieDB = {
 };
 
 for (let i = 1; i <= count; i++) {
-        let newFilm = prompt('Один из просмотренных фильмов?', '')
-        let filmScore = prompt('На сколько оцените?', '')
-        personalMovieDB.movies[newFilm] = filmScore
+        let a = prompt('Один из просмотренных фильмов?', '')
+        let b = prompt('На сколько оцените?', '')
+
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                   personalMovieDB.movies[a] = b
+        } else {
+            console.log('erroe');
+            i--;
+        }
     }
 
 
